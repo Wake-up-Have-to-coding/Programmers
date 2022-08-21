@@ -41,7 +41,7 @@ class Solution {
         }
         
         for(HashMap.Entry<String, Integer> entry : participant_maps.entrySet()){
-            if(entry.getValue()){
+            if(entry.getValue() > 0){
                 answer = entry.getKey();
                 return answer;
             }    
