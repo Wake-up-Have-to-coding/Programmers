@@ -1,0 +1,55 @@
+
+### :pushpin: 1차 코드
+
+```java
+class Solution {
+    public int[] solution(int[] prices) {
+        int[] answer = new int[prices.length];
+        
+        for(int i=0;i<prices.length;i++){
+            for(int k=i+1;k<prices.length;k++){
+                if(prices[i]<=prices[k]){
+                    answer[i]++;
+                }
+                else{
+                    answer[i]++;
+                    break;
+                }
+            }
+          
+        }
+        return answer;
+    }
+}
+```
+
+<br>
+
+### :pushpin: 2차 코드
+
+```java
+import java.util.*;
+class Solution {
+    public int[] solution(int[] prices) {
+        int price_length = prices.length;
+        int[] answer = new int[price_length];
+        int count = 0;
+        
+        for(int i = 0; i < price_length ; i++){
+            count = 0;
+            if(i == price_length-1){
+                answer[i] = 0;
+                return answer;
+            }
+            for(int k = i+1; k < price_length ; k++){
+                count++;
+                if(prices[i]>prices[k]){
+                    break;
+                }
+            }
+            answer[i] = count;
+        }
+        return answer;
+    }
+}
+```
