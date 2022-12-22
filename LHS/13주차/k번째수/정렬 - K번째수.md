@@ -1,4 +1,4 @@
-## :round_pushpin: 힙 - 더맵게
+## :round_pushpin: 정렬 - K번째수
 
 ***
 
